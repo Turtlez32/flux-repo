@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - ../../infrastructure/controllers
   - ../../apps/production/headlamp
+  - ../../apps/production/wordle
