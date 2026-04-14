@@ -1,0 +1,4 @@
+creation_rules:
+  - path_regex: clusters/production/flux-system/.*secret.*\.ya?ml$
+    encrypted_regex: "^(data|stringData)$"
+    age: age18j6zrhuukf8tuemyt9xzj0plfxzadtzfqjncmufhspptsl67hp2qjmj56n

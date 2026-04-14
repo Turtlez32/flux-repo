@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: headlamp-tls
+  namespace: headlamp
+spec:
+  secretName: headlamp-tls
+  dnsNames:
+    - headlamp.turtleware.au
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt-production

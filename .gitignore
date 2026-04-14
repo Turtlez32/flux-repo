@@ -1,0 +1,6 @@
+age.agekey
+flux-system-deploy-key
+flux-system-deploy-key.pub
+bootstrap/
+tools/
+clusters/production/flux-system/secret-review.yaml
