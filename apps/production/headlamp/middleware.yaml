@@ -1,9 +1,8 @@
 apiVersion: traefik.io/v1alpha1
 kind: Middleware
 metadata:
-  name: headlamp-management-allowlist
+  name: headlamp-basic-auth
   namespace: headlamp
 spec:
-  ipAllowList:
-    sourceRange:
-      - 10.3.40.0/24
+  basicAuth:
+    secret: headlamp-basic-auth
