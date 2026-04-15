@@ -12,6 +12,7 @@ spec:
     - match: Host(`headlamp.turtleware.au`)
       kind: Rule
       middlewares:
+        - name: headlamp-management-allowlist
         - name: redirect-to-https
       services:
         - name: headlamp
@@ -40,6 +41,8 @@ spec:
   routes:
     - match: Host(`headlamp.turtleware.au`)
       kind: Rule
+      middlewares:
+        - name: headlamp-management-allowlist
       services:
         - name: headlamp
           port: 80
