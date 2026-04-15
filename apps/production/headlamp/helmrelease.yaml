@@ -5,6 +5,10 @@ metadata:
   namespace: headlamp
 spec:
   interval: 30m
+  valuesFrom:
+    - kind: Secret
+      name: headlamp-oidc-values
+      valuesKey: values.yaml
   chart:
     spec:
       chart: headlamp
@@ -20,6 +24,9 @@ spec:
       inCluster: true
       inClusterContextName: main
       enableHelm: true
+      oidc:
+        scopes: email
+        usePKCE: true
     serviceAccount:
       create: true
       name: headlamp
