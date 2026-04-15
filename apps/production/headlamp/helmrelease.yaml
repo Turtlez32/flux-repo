@@ -24,8 +24,10 @@ spec:
       inCluster: true
       inClusterContextName: main
       enableHelm: true
+      extraArgs:
+        - -oidc-skip-tls-verify
       oidc:
-        scopes: email
+        scopes: openid profile email offline_access
         usePKCE: true
     serviceAccount:
       create: true
