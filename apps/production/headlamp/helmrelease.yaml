@@ -26,6 +26,7 @@ spec:
       enableHelm: true
       extraArgs:
         - -oidc-skip-tls-verify
+        - -oidc-use-access-token
       oidc:
         scopes: openid,profile,email,offline_access
         usePKCE: true
