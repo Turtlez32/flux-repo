@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: draw
+  namespace: draw
+spec:
+  selector:
+    app: draw
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+      protocol: TCP

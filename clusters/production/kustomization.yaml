@@ -5,3 +5,4 @@ resources:
   - ../../apps/production/headlamp
   - ../../apps/production/wordle
   - ../../apps/production/reflection
+  - ../../apps/production/draw

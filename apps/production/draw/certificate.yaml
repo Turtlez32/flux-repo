@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: draw-tls
+  namespace: draw
+spec:
+  secretName: draw-tls
+  dnsNames:
+    - draw.turtleware.au
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt-production
