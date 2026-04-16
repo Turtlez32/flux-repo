@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: reflection
+  namespace: reflection
+spec:
+  selector:
+    app: reflection
+  ports:
+    - name: http
+      port: 3003
+      targetPort: http
+      protocol: TCP

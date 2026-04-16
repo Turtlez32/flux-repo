@@ -4,3 +4,4 @@ resources:
   - ../../infrastructure/controllers
   - ../../apps/production/headlamp
   - ../../apps/production/wordle
+  - ../../apps/production/reflection

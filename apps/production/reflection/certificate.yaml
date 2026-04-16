@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: reflection-tls
+  namespace: reflection
+spec:
+  secretName: reflection-tls
+  dnsNames:
+    - reflection.turtleware.au
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt-production
