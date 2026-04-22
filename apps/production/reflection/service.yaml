@@ -8,6 +8,6 @@ spec:
     app: reflection
   ports:
     - name: http
-      port: 3003
+      port: 3000
       targetPort: http
       protocol: TCP
