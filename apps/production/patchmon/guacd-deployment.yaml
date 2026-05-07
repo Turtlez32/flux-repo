@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: patchmon-guacd
+  namespace: patchmon
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: patchmon-guacd
+  template:
+    metadata:
+      labels:
+        app: patchmon-guacd
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node-role.kubernetes.io/control-plane
+                    operator: DoesNotExist
+                  - key: node-role.kubernetes.io/master
+                    operator: DoesNotExist
+      containers:
+        - name: guacd
+          image: guacamole/guacd:latest
+          imagePullPolicy: Always
+          ports:
+            - name: guacd
+              containerPort: 4822
+              protocol: TCP
+          readinessProbe:
+            tcpSocket:
+              port: guacd
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            tcpSocket:
+              port: guacd
+            initialDelaySeconds: 20
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 1000m
+              memory: 512Mi

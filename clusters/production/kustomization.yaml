@@ -6,3 +6,4 @@ resources:
   - ../../apps/production/wordle
   - ../../apps/production/reflection
   - ../../apps/production/draw
+  - ../../apps/production/patchmon
