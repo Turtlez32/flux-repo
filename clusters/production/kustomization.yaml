@@ -7,4 +7,5 @@ resources:
   - ../../apps/production/wordle
   - ../../apps/production/reflection
   - ../../apps/production/draw
+  - ../../apps/production/dashboard
   - ../../apps/production/patchmon
