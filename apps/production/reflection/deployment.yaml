@@ -24,7 +24,7 @@ spec:
                     operator: DoesNotExist
       containers:
         - name: reflection
-          image: turtlez/reflection:latest
+          image: turtlez/reflection:main_20260518075510_6aac1e8b # {"$imagepolicy": "flux-system:reflection"}
           imagePullPolicy: Always
           envFrom:
             - secretRef:

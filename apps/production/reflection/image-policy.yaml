@@ -1,0 +1,14 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: reflection
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: reflection
+  filterTags:
+    pattern: "^main_(?P<ts>[0-9]{14})_[a-f0-9]+$"
+    extract: "$ts"
+  policy:
+    numerical:
+      order: asc
