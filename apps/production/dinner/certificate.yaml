@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: dinner-tls
+  namespace: dinner
+spec:
+  secretName: dinner-tls
+  dnsNames:
+    - dinner.turtleware.au
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt-production
