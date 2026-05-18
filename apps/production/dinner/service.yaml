@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dinner
+  namespace: dinner
+spec:
+  selector:
+    app: dinner
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+      protocol: TCP

@@ -8,4 +8,5 @@ resources:
   - ../../apps/production/reflection
   - ../../apps/production/draw
   - ../../apps/production/dashboard
+  - ../../apps/production/dinner
   - ../../apps/production/patchmon
