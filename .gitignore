@@ -5,3 +5,4 @@ bootstrap/
 tools/
 clusters/production/flux-system/secret-review.yaml
 apps/**/secret-review.yaml
+apps/production/.DS_Store
