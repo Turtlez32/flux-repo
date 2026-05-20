@@ -24,7 +24,7 @@ spec:
                     operator: DoesNotExist
       containers:
         - name: dashboard
-          image: turtlez/dashboard:latest
+          image: turtlez/dashboard:main_20260520040804_895c7876 # {"$imagepolicy": "flux-system:dashboard"}
           imagePullPolicy: Always
           envFrom:
             - secretRef:
