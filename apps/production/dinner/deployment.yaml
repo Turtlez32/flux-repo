@@ -24,7 +24,7 @@ spec:
                     operator: DoesNotExist
       containers:
         - name: dinner
-          image: turtlez/dinner:latest
+          image: turtlez/dinner:main_20260520043945_3ca8832e # {"$imagepolicy": "flux-system:dinner"}
           imagePullPolicy: Always
           envFrom:
             - secretRef:

@@ -1,0 +1,8 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: dinner
+  namespace: flux-system
+spec:
+  image: turtlez/dinner
+  interval: 1m0s
