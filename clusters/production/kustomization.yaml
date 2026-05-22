@@ -10,3 +10,4 @@ resources:
   - ../../apps/production/dashboard
   - ../../apps/production/dinner
   - ../../apps/production/patchmon
+  - ../../apps/production/usage
