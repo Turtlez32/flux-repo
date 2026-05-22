@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: usage
+  namespace: usage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: usage
+  template:
+    metadata:
+      labels:
+        app: usage
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node-role.kubernetes.io/control-plane
+                    operator: DoesNotExist
+                  - key: node-role.kubernetes.io/master
+                    operator: DoesNotExist
+      containers:
+        - name: usage
+          image: turtlez/ai-usage:master_20260522112718_356cb4c5 # {"$imagepolicy": "flux-system:usage"}
+          imagePullPolicy: Always
+          envFrom:
+            - secretRef:
+                name: usage-env
+          ports:
+            - name: http
+              containerPort: 3011
+              protocol: TCP
+          resources:
+            requests:
+              cpu: 50m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
