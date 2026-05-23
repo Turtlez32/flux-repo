@@ -24,7 +24,7 @@ spec:
                     operator: DoesNotExist
       containers:
         - name: wordle
-          image: turtlez/neon-wordle:latest
+          image: turtlez/neon-wordle:main_20260523112415_5ba81dff # {"$imagepolicy": "flux-system:wordle"}
           imagePullPolicy: Always
           envFrom:
             - secretRef:
