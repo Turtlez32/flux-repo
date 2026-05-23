@@ -11,3 +11,4 @@ resources:
   - ../../apps/production/dinner
   - ../../apps/production/patchmon
   - ../../apps/production/usage
+  - ../../apps/production/sudoku

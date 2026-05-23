@@ -1,0 +1,8 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: sudoku
+  namespace: flux-system
+spec:
+  image: turtlez/sudoku
+  interval: 1m0s
