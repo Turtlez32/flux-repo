@@ -24,7 +24,7 @@ spec:
                     operator: DoesNotExist
       containers:
         - name: sudoku
-          image: turtlez/sudoku:main_20260523115848_382b7e9d # {"$imagepolicy": "flux-system:sudoku"}
+          image: turtlez/sudoku:main_20260526043732_16af2386 # {"$imagepolicy": "flux-system:sudoku"}
           imagePullPolicy: Always
           ports:
             - name: http
