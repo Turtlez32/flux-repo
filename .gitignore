@@ -6,3 +6,5 @@ tools/
 clusters/production/flux-system/secret-review.yaml
 apps/**/secret-review.yaml
 apps/production/.DS_Store
+infrastructure/**/.DS_Store
+.DS_Store

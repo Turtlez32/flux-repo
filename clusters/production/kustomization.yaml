@@ -2,6 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../../infrastructure/controllers
+  - ../../infrastructure/storage
   - ../../apps/production/api
   - ../../apps/production/headlamp
   - ../../apps/production/wordle
