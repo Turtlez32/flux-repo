@@ -3,6 +3,8 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - secret.sops.yaml
+  - database-service.yaml
+  - database-statefulset.yaml
   - image-repository.yaml
   - image-policy.yaml
   - image-update-automation.yaml

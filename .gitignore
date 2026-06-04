@@ -8,3 +8,4 @@ apps/**/secret-review.yaml
 apps/production/.DS_Store
 infrastructure/**/.DS_Store
 .DS_Store
+**/*.html
