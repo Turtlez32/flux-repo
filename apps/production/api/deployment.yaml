@@ -24,7 +24,7 @@ spec:
                     operator: DoesNotExist
       containers:
         - name: api
-          image: turtlez/homelabapi:main_20260515034359_c0bbd092 # {"$imagepolicy": "flux-system:api"}
+          image: turtlez/homelabapi:main_20260605060757_0bf38b2d # {"$imagepolicy": "flux-system:api"}
           imagePullPolicy: Always
           envFrom:
             - secretRef:
