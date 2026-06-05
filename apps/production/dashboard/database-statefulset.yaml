@@ -27,6 +27,9 @@ spec:
         - name: postgres
           image: postgres:17-alpine
           imagePullPolicy: IfNotPresent
+          env:
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgdata
           envFrom:
             - secretRef:
                 name: dashboard-env
