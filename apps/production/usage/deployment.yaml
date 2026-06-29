@@ -24,7 +24,7 @@ spec:
                     operator: DoesNotExist
       containers:
         - name: usage
-          image: turtlez/ai-usage:master_20260522112718_356cb4c5 # {"$imagepolicy": "flux-system:usage"}
+          image: turtlez/ai-usage:master_20260629043547_1b573b99 # {"$imagepolicy": "flux-system:usage"}
           imagePullPolicy: Always
           envFrom:
             - secretRef:
